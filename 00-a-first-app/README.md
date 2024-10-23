@@ -119,4 +119,4 @@ These examples demonstrate why TypeScript is useful:
 
 ## Conclusion
 
-**This project illustrates TypeScript's core benefit:**: catching errors during development rather than at runtime. By using TypeScript's type-checking, we prevent common issues like typos in object properties or incorrect function argument orders. This leads to a smoother, safer, and more efficient coding process.
+**This project illustrates TypeScript's core benefit**: catching errors during development rather than at runtime. By using TypeScript's type-checking, we prevent common issues like typos in object properties or incorrect function argument orders. This leads to a smoother, safer, and more efficient coding process.
