@@ -4,12 +4,17 @@
   "description": "**Fetch JSON - Simple TypeScript Project**: This project is a simple TypeScript application that demonstrates how to make a network request to an external API using Axios. It highlights TypeScript's ability to catch errors during development rather than runtime.",
   "main": "index.js",
   "scripts": {
+    "compile": "npx tsc index.ts && node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "devDependencies": {
+    "typescript": "^5.6.3"
+  },
   "dependencies": {
+    "@types/node": "^22.7.9",
     "axios": "^1.7.7"
   }
 }
