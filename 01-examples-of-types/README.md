@@ -1,6 +1,6 @@
 # Types, Annotations, Assertions, and Inference
 
-The scripts explores key TypeScript features such as type annotations, type assertions, and type inference. As the best practices for working with types in variables, functions, objects, and classes.
+The scripts explores key TypeScript features such as type annotations, type assertions, and type inference, while covering best practices for handling types in variables, functions, objects, classes, interfaces, tuples, and arrays.
 
 ## Files Overview
 1. **`types.ts`**
@@ -128,12 +128,108 @@ const {
 }: { coords: { lat: number; lng: number } } = profile;
 ```
 
+5. **`tuples.ts`**
+
+Demonstrates tuples and type aliases for grouping multiple values with specific types.
+
+**Defining a type alias and using it in tuples:**
+
+```typescript
+type Drink = [string, boolean, number];
+const pepsi: Drink = ["brown", true, 40];
+```
+
+**Tuple and object comparison:**
+
+```typescript
+const carSpecs: [number, number] = [400, 3354];
+const carStats = { horsepower: 400, weight: 3354 };
+```
+
+6. **`interfaces.ts`**
+
+Covers interfaces for defining structures and implementing them in functions.
+
+**Defining an interface:**
+
+```typescript
+interface Reportable {
+  summary(): string;
+}
+```
+
+**Using interfaces in functions:**
+
+```typescript
+const printSummary = (item: Reportable): void => {
+  console.log(item.summary());
+};
+```
+
+7. **`arrays.ts`**
+
+Shows array handling, type inference, and flexible types.
+
+**Array declaration with inferred types:**
+
+```typescript
+const carMakers = ["ford", "toyota", "chevy"];
+```
+
+**Multidimensional arrays:**
+
+```typescript
+const carsByMake: string[][] = [["f150"], ["corolla"], ["camaro"]];
+```
+
+**Flexible types with unions:**
+
+```typescript
+const importantDates: (Date | string)[] = [new Date(), "2030-10-10"];
+```
+
+8. **`classes.ts`**
+
+Introduces classes with inheritance, access modifiers, and method overriding.
+
+**Class declaration with a constructor:**
+
+```typescript
+class Vehicle {
+  constructor(public color: string) {}
+  protected honk(): void {
+    console.log("beep");
+  }
+}
+```
+
+**Class inheritance and access modifiers:**
+
+```typescript
+class Car extends Vehicle {
+  constructor(public wheels: number, color: string) {
+    super(color);
+  }
+  private drive(): void {
+    console.log("vroom");
+  }
+  startDrivingProcess(): void {
+    this.drive();
+    this.honk();
+  }
+}
+```
+
 ## Key Concepts
 
-- **Type Annotations**: Allow developers to explicitly specify the types for variables, function parameters, and return values. They improve code clarity and catch potential errors early.
-- **Type Inference**: TypeScript automatically infers the type based on the value assigned to a variable, reducing the need for explicit type annotations in some cases.
-- **Type Assertions**: Let us override TypeScript's inferred types in situations where we know more about a value's type, such as when working with data from JSON.parse().
-- **Union Types**: Used when a variable may hold values of multiple types, enhancing flexibility while maintaining type safety.
+- **Type Annotations**: Explicitly define types for variables, function parameters, and return values to enhance code clarity.
+
+- **Type Inference**: Automatically infers types based on assigned values, reducing the need for explicit annotations.
+- **Type Assertions**: Allows overriding inferred types when we know more about a value's type, such as with JSON data.
+- **Union Types**: Useful for variables that may hold multiple types, offering type flexibility and safety.
 - **Void and Never Types**:
-  - **`void`** is used for functions that don't return anything.
-  - **`never`** is used for functions that will not return (e.g., functions that throw errors).
+  - **`void`:** For functions that return no value.
+  - **`never`:** For functions that will not return, like those that throw errors.
+- **Tuples:** Ordered lists with fixed types for each element, enhancing structure for grouped values.
+- **Interfaces:** Used to define the structure of objects and enforce consistent properties or methods across different implementations.
+- **Classes:** Allows object-oriented programming with inheritance, access control, and encapsulation.
