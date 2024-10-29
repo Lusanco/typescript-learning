@@ -15,9 +15,9 @@ The app also leverages **`Parcel Bundler`** for easy bundling of **`TypeScript`*
 
 ## Features
 
-**Randomized Entity Generation**: Each user and company is generated with random details using **`@faker-js/faker`**, including names and locations.
-**Interactive Map Display**: Each entity is added as a marker to a Google Map; clicking a marker displays its information in an InfoWindow.
-**Flexible Codebase**: Interfaces allow for the easy addition of new mappable entity types, improving scalability.
+- **Randomized Entity Generation**: Each user and company is generated with random details using **`@faker-js/faker`**, including names and locations.
+- **Interactive Map Display**: Each entity is added as a marker to a Google Map; clicking a marker displays its information in an InfoWindow.
+- **Flexible Codebase**: Interfaces allow for the easy addition of new mappable entity types, improving scalability.
 
 ## Prerequisites
 
