@@ -1,4 +1,4 @@
-# A First App
+# Introduction
 
 Simple TypeScript project that demonstrates how to make a network request to an external API using Axios in TypeScript. It highlights TypeScript's ability to catch errors during development, helping prevent issues from reaching runtime.
 
