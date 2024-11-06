@@ -16,5 +16,5 @@ export class Summary {
   }
 }
 
-// Example of use
+// Example Of Use
 // new Summary(new WinsAnalysis(), new ConsoleRport());
