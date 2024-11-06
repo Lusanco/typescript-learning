@@ -13,14 +13,4 @@ matchReader.load();
 
 // matchReader.matches
 
-let manUnitedWins = 0;
-
-for (let match of matchReader.matches) {
-  if (match[1] === "Main United" && MatchfResult.HomeWin === "H") {
-    manUnitedWins++;
-  } else if (match[2] === "Man United" && MatchfResult.AwayWin === "A") {
-    manUnitedWins++;
-  }
-}
-
-console.log(`Man United won ${manUnitedWins} games`);
+// console.log(`Man United won ${manUnitedWins} games`);
