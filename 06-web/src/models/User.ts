@@ -7,7 +7,7 @@ import { Eventing } from "./Eventing";
 // }
 
 // my try enforcing types
-type UserProps = {
+export type UserProps = {
   id?: number;
   name?: string;
   age?: number;
