@@ -2,11 +2,15 @@ import { User } from "./models/User";
 
 const user = new User({ name: "El Power", age: 619 });
 
-user.attributes.get("id");
-user.attributes.get("id");
-user.attributes.get("id");
+// quick reminder on accesors
 
-user.sync.save();
+class Person {
+  constructor(public firstName: string, public lastName: string) {}
 
-// Before...
-user.save();
+  get fullName(): string {
+    return `${this.firstName} ${this.lastName}`;
+  }
+}
+
+const person = new Person("firstname", "lastname");
+console.log(person.fullName);
