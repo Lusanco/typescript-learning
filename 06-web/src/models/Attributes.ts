@@ -1,11 +1,22 @@
+import { UserProps } from "./User";
 export class Attributes<T extends object> {
   constructor(private data: T) {}
 
-  get(propName: string): T {
-    return this.data[propName];
+  get<K extends keyof T>(key: K): T[K] {
+    return this.data[key];
   }
 
   set(update: T): void {
     Object.assign(this.data, update);
   }
 }
+
+const attrs = new Attributes<UserProps>({
+  id: 5,
+  age: 19,
+  name: "Jessica",
+});
+
+const name = attrs.get("name");
+const age = attrs.get("age");
+const id = attrs.get("id");
