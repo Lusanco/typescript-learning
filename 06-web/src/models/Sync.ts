@@ -3,7 +3,7 @@ import axios, { AxiosPromise, AxiosResponse } from "axios";
 // interface HasId = { id: number };
 // using type instead of interface
 type HasId = {
-  id: number;
+  id?: number;
 };
 
 const http = "http://localhost:3000/users";
