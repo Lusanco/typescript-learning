@@ -8,7 +8,7 @@ type HasId = {
 
 const http = "http://localhost:3000/users";
 
-export class Sync<T extends HasId> {
+export class ApiSync<T extends HasId> {
   constructor(public rootUrl: string) {}
 
   fetch(id: number): AxiosPromise {
