@@ -2,108 +2,23 @@
   "users": [
     {
       "id": 1,
-      "age": 499,
-      "name": "Modd"
+      "name": "newer name",
+      "age": 0
     },
     {
-      "name": "El Power",
-      "age": 619,
+      "name": "new record",
+      "age": 0,
       "id": 2
     },
     {
-      "name": "Etel",
-      "age": 619,
-      "id": 3
-    },
-    {
-      "name": "Nobco",
-      "age": 619,
-      "id": 4
-    },
-    {
-      "name": "FullB",
-      "age": 619,
-      "id": 5
-    },
-    {
-      "name": "El Power",
-      "age": 619,
-      "id": 6
-    },
-    {
-      "name": "Al-D",
-      "age": 619,
+      "name": "NAME",
+      "age": 20,
       "id": 7
     },
     {
-      "name": "NAME",
-      "age": 20,
-      "id": 8
-    },
-    {
-      "name": "NAME",
+      "name": "New User",
       "age": 20,
       "id": 9
-    },
-    {
-      "name": "asdf",
-      "age": 20,
-      "id": 10
-    },
-    {
-      "name": "asdf",
-      "age": 20,
-      "id": 11
-    },
-    {
-      "name": "asdf",
-      "age": 20,
-      "id": 12
-    },
-    {
-      "name": "asdf",
-      "age": 20,
-      "id": 13
-    },
-    {
-      "name": "asdf",
-      "age": 20,
-      "id": 14
-    },
-    {
-      "name": "asdf",
-      "age": 20,
-      "id": 15
-    },
-    {
-      "name": "asdf",
-      "age": 20,
-      "id": 16
-    },
-    {
-      "name": "asdf",
-      "age": 20,
-      "id": 17
-    },
-    {
-      "name": "asdf",
-      "age": 20,
-      "id": 18
-    },
-    {
-      "name": "asdf",
-      "age": 20,
-      "id": 19
-    },
-    {
-      "name": "asdf",
-      "age": 20,
-      "id": 20
-    },
-    {
-      "name": "NAME",
-      "age": 20,
-      "id": 21
     }
   ]
 }
