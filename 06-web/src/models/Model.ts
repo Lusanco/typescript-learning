@@ -16,7 +16,7 @@ type Events = {
   trigger(eventName: string): void;
 };
 
-type HasId = {
+export type HasId = {
   id?: number;
 };
 
