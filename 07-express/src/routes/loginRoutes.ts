@@ -1,5 +1,14 @@
 import { Router, Request, Response } from "express";
 
+// type does not show error
+// type RequestWithBody = Request & {
+//   body: { [key: string]: string | undefined };
+// };
+
+interface RequestWithBody extends Request {
+  body: { [key: string]: string | undefined };
+}
+
 const router = Router();
 
 router.get("/login", (req: Request, res: Response) => {
@@ -18,10 +27,16 @@ router.get("/login", (req: Request, res: Response) => {
     `);
 });
 
-router.post("/login", (req: Request, res: Response) => {
+router.post("/login", (req: RequestWithBody, res: Response) => {
   const { email, password } = req.body;
   //   res.send(email + password);
-  res.send(email.toUpperCase());
+
+  //   type guard
+  if (email) {
+    res.send(email.toUpperCase());
+  } else {
+    res.send("You must provide an email");
+  }
 });
 
 export { router };
