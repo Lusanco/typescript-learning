@@ -1,4 +1,5 @@
 class Boat {
+  @testDecorator
   color: string = "red";
 
   get formattedColor(): string {
@@ -10,6 +11,11 @@ class Boat {
     throw new Error();
     console.log("swish");
   }
+}
+
+function testDecorator(target: any, key: string) {
+  console.log(target.color); // undefined
+  // console.log(key);
 }
 
 // Decorator Factory is a normal function that returns our decorator
@@ -26,5 +32,3 @@ function logError(errorMessage: string) {
     };
   };
 }
-
-new Boat().pilot();
